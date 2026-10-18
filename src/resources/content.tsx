@@ -78,7 +78,7 @@ const home: Home = {
   subline: (
     <>
       I'm {person.firstName}, a {person.role.toLowerCase()} at{" "}
-      <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+      <Text as="span" size="xl" weight="strong">Black Squirrel Entertainment</Text>,<br />where I make creative video content.
     </>
   ),
 };
@@ -87,7 +87,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role} from Massachusetts`,
   tableOfContent: {
     display: true,
     subItems: false,
