@@ -21,12 +21,12 @@ const routes: RoutesConfig = {
   "/about": true,
   "/work": true,
   "/blog": true,
-  "/gallery": true,
+  "/gallery": false,
 };
 
 const display: DisplayConfig = {
-  location: true,
-  time: true,
+  location: false,
+  time: false,
   themeSwitcher: true,
 };
 
@@ -37,24 +37,23 @@ const protectedRoutes: ProtectedRoutesConfig = {
 };
 
 // Import and set font for each variant
-import { Geist, Chewy } from "next/font/google";
-import { Geist_Mono, Fuzzy_Bubbles } from "next/font/google";
+import { Abril_Fatface, Playfair_Display, Geist_Mono } from "next/font/google";
 
-const heading = Chewy({
+const heading = Abril_Fatface({
   weight: "400",
   variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
 });
 
-const body = Fuzzy_Bubbles({
+const body = Playfair_Display({
   weight: "400",
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
 
-const label = Fuzzy_Bubbles({
+const label = Playfair_Display({
   weight: "400",
   variable: "--font-label",
   subsets: ["latin"],
@@ -78,8 +77,8 @@ const fonts: FontsConfig = {
 const style: StyleConfig = {
   theme: "system", // dark | light | system
   neutral: "slate", // sand | gray | slate | mint | rose | dusk | custom
-  brand: "pink", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  accent: "pink", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  accent: "aqua", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
   solid: "contrast", // color | contrast
   solidStyle: "plastic", // flat | plastic
   border: "rounded", // rounded | playful | conservative | sharp
@@ -134,7 +133,7 @@ const effects: EffectsConfig = {
     height: "0.25rem",
   },
   lines: {
-    display: false,
+    display: true,
     opacity: 100,
     color: "neutral-alpha-weak",
     size: "16",
